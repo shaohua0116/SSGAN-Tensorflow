@@ -39,7 +39,7 @@ class Model(object):
 
         self.recon_weight = tf.placeholder_with_default(
             tf.cast(1.0, tf.float32), [])
-        tf.summary.scalar("loss/recon_wieght", self.recon_weight)
+        tf.summary.scalar("loss/recon_weight", self.recon_weight)
 
         self.build(is_train=is_train)
 
