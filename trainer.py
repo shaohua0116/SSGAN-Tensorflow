@@ -33,7 +33,7 @@ class Trainer(object):
 
         os.makedirs(self.train_dir)
         log.infov("Train Dir: %s", self.train_dir)
-
+        print("step2")
         # --- input ops ---
         self.batch_size = config.batch_size
 
@@ -205,9 +205,9 @@ class Trainer(object):
                )
 
 def main():
-
+    print("step0")
     config, model, dataset_train, dataset_test = argparser(is_train=True)
-
+    print("step1")
     trainer = Trainer(config, model, dataset_train, dataset_test)
 
     log.warning("dataset: %s, learning_rate_g: %f, learning_rate_d: %f",

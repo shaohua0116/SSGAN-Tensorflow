@@ -27,5 +27,5 @@ for file in sorted(glob.glob(os.path.join(args.train_dir, "*.hdf5")), key=os.pat
     II.append(I)
 
 II = np.stack(II)
-print II.shape
+print(II.shape)
 imageio.mimsave(args.output_file, II, fps=5)
